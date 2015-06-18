@@ -6,7 +6,6 @@ class Moves(object):
 		with open(filename, 'r') as f:
 			data = f.readlines()[index_of_move]
 			data = data.split(',')
-			print(data)
 			self.number = data[0]
 			self.name = data[1]
 			self.type = data[2]
@@ -17,7 +16,7 @@ class Moves(object):
 			else:
 				self.power = None
 			if (data[6]) != 'None\n':
-				self.accuracy = int(data[6])/100
+				self.accuracy = float(data[6])/100
 			else:
 				self.accuracy = None
 
